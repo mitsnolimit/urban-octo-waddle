@@ -1,0 +1,2 @@
+# urban-octo-waddle
+name: Greetings  on: [pull_request, issues]  jobs:   greeting:     runs-on: ubuntu-latest     permissions:       issues: write       pull-requests: write     steps:     - uses: actions/first-interaction@v1       with:         repo-token: ${{ secrets.GITHUB_TOKEN }}         issue-message: 'Hi There , thanks for opening an issue in our awesome  repository, someone will be in touch with you shortly'         pr-message: 'Hi There , thanks for opening an PR in our awesome  repository, someone will be in touch with you shortly'
